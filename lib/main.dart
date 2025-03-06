@@ -1,3 +1,4 @@
+import 'package:diary/presentation/auth/pages/signup.dart';
 import 'package:diary/presentation/auth/pages/singin.dart';
 import 'package:diary/service_locator.dart';
 import 'package:flutter/foundation.dart';
@@ -24,8 +25,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: SigninPage(),
+      initialRoute: '/signin', // Starting screen
+      routes: {
+        '/signin': (context) => SigninPage(),
+        '/signup': (context) => SignupPage(),
+        //'/home': (context) => HomeScreen(),
+        //'/entry': (context) => JournalEntryScreen(),
+      },
     );
   }
 }
