@@ -39,7 +39,7 @@ class SigninPage extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        _text('Email'),
+                        _text('Email!'),
                         _emailField(context),
                         SizedBox(height: 20),
                         _text('Password'),
